@@ -108,7 +108,7 @@ table {
   margin: 0 auto;
 }
 #loading #preloader:after {
-  content: "O\2082";
+  content: "O\2082 Media";
   /* Text under the circle */
   position: absolute;
   text-transform: uppercase;
