@@ -534,27 +534,26 @@
           <div class="section-body pb-4" style="min-height: auto;">
             <div class="row">
               <div class="col-12 col-md-6 px-4 px-md-5 mb-5 mb-md-0">
-                <form action="">
+                <form id="contact-form" action="https://hook.us2.make.com/77ekd14oauv1prrm9x82zdmpbw679o5u" method="POST">
                   <div class="mb-2">
                     <label for="firstName" class="form-label">First Name *</label>
-                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="firstName">
+                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="firstName" name="firstName" required>
                   </div>
                   <div class="mb-2">
                     <label for="lastName" class="form-label">Last Name *</label>
-                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="lastName">
+                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="lastName" name="lastName" required>
                   </div>
                   <div class="mb-2">
                     <label for="email" class="form-label">Email *</label>
-                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="email">
+                    <input type="email" class="form-control border-black border-2 rounded-0 px-3 py-2" id="email" name="email" required>
                   </div>
                   <div class="mb-2">
                     <label for="subject" class="form-label">Subject</label>
-                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="subject">
+                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="subject" name="subject">
                   </div>
                   <div class="mb-2">
                     <label for="message" class="form-label">Enter Your Message</label>
-                    <textarea type="text" rows="3" class="form-control border-black border-2 rounded-0 px-3 py-2"
-                      id="message" style="resize: none;"></textarea>
+                    <textarea rows="3" class="form-control border-black border-2 rounded-0 px-3 py-2" id="message" name="message" style="resize: none;"></textarea>
                   </div>
                   <div class="col-12">
                     <button type="submit" class="btn btn-primary submit-btn ms-auto d-block">Submit</button>
@@ -626,6 +625,24 @@
 
   </script>
   <script src="assets/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("YOUR_USER_ID");
+    })();
+  </script>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(function() {
+          console.log('SUCCESS!');
+        }, function(error) {
+          console.log('FAILED...', error);
+        });
+    });
+  </script>
 </body>
 
 </html>
