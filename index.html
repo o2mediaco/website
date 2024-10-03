@@ -1,157 +1,631 @@
 <!DOCTYPE html>
-<html lang="en-us" class="no-js">
+<html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-        <title>O2 Media</title>
-        <meta name="description" content="The description should optimally be between 150-160 characters.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Madeon08">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/fonts/HelveticaNeue/HelveticaNeueBold.ttf" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <title>WIX TO STAND ALONE</title>
+</head>
 
-        <!-- ================= Favicon ================== -->
-        <!-- Standard -->
-        <link rel="shortcut icon" href="img/favicon.png">
-        <!-- Retina iPad Touch Icon-->
-        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon-retina-ipad.png">
-        <!-- Retina iPhone Touch Icon-->
-        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon-retina-iphone.png">
-        <!-- Standard iPad Touch Icon--> 
-        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon-standard-ipad.png">
-        <!-- Standard iPhone Touch Icon--> 
-        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon-standard-iphone.png">
+<body>
 
-        <!-- ============== Resources style ============== -->
-        <link rel="stylesheet" href="css/style.css" />
+  <!-- desktop and top -->
 
-		<!-- Modernizr runs quickly on page load to detect features -->
-		<script src="js/modernizr.custom.js"></script>
-	</head>
-	
-	<body>
+  <nav class="navbar navbar-dark navbar-expand-lg" style="--navbar-bg: #081921;" id="top-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/o2media-h.png" width="180" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu"
+        aria-controls="mobile-menu" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#who">WHO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#what">WHAT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work">WORK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#how">HOW</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">TEAM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-		<canvas id="canvasbg"></canvas>
-		<canvas id="canvas"></canvas>
+  <!-- Mobile Mebu -->
+  <div class="offcanvas offcanvas-top min-vh-100" data-bs-scroll="true" id="mobile-menu" aria-labelledby="mobile-menu"
+    style="--bs-offcanvas-bg:#051923">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+        style="background: none; font-size: 20px; color: #fff;line-height: 1; padding-bottom: 0;">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav navbar-dark text-center mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#who">WHO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#what">WHAT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#work">WORK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#how">HOW</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#team">TEAM</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-		<!-- Page preloader -->
-		<div id="loading">
-			<div id="preloader">
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-	
-		<!-- START - Home part -->
-		<div class="outer-home">
-		
-			<!-- START - Home section -->
-			<section id="home">
+  <!-- side menu  -->
+  <aside id="side-scroll-nav" class="navbar position-fixed">
+    <ul class="navbar-nav navbar-dark d-flex flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="#home">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#who">WHO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#what">WHAT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#work">WORK</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#how">HOW</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#team">TEAM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">CONTACT</a>
+      </li>
+    </ul>
+  </aside>
 
-				<!-- Background picture(s) -->
-				<div id="vegas-background"></div>
+  <main data-bs-spy="scroll" data-bs-target="#side-scroll-nav" data-bs-root-margin="0px 0px 45%" data-bs-offset="0"
+    data-bs-smooth-scroll="true" tabindex="0">
 
-				<!-- Overlay -->
-				<div class="global-overlay"></div>
+    <section id="home">
+      <div class="section-background position-fixed">
+        <img class="banner" src="assets/img/Background_home.svg" alt="Bg Img">
+      </div>
+      <div class="container">
+        <div class="section row align-items-center">
+          <div class="hero  ps-4 ps-md-5rem animation-block">
+            <h1 class="hero-title mb-0 fade-animation" style="color: #003554;">STRATEGIC <br> OPTIMIZATIONS</h1>
+            <h1 class="hero-title md-3 mb-md-5 fade-animation" style="color: #006494;">DRIVING <br> RESULTS</h1>
+            <p class="text-20 fw-bold pt-3 letter-spacing-5px fade-animation" style="color: #006494;">THAT IGNITES BRAND
+              GROWTH</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<!-- Your logo -->
-				<img src="img/logo.png" alt="" class="brand-logo text-intro opacity-0" />
+    <section class="position-relative" id="who">
+      <div class="section-body section-bg pb-md-5" style="--section-bg: url('../img/Background_Who_we_are.jpg');">
+        <div class="container z-1 position-relative">
+          <div class="row align-items-center ps-4 ps-md-5 animation-block">
+            <h1 class="section-title title-top-dots mb-4 mb-md-5 mt-5 slide-from-left-animation"
+              style="color: #003554;">
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              WHO <br> WE ARE
+            </h1>
+            <p class="fade-animation fw-bold" style="color: #003554;">Our approach guarantees that your media investment
+              works harder,
+              delivering measurable results</p>
+            <p class="fade-animation" style="color: #006494;">We transform brand connections and
+              energize consumer
+              engagement by delivering dynamic advertising experiences that help
+              build deep brand loyalty and amplify impact. We set the standard in digital advertising with creativity,
+              integrity, and
+              excellence, maximizing your media budget through strategic optimization and advanced analytics. By
+              fine-tuning campaigns
+              within and across platforms, we create better performance and efficiencies with a true omni channel
+              approach.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<!-- START - Content -->
-				<div class="content">
+    <section class="position-relative" id="what">
+      <div class="section-head pt-5" style="--section-head-bg: #051923;">
+        <div class="container ps-5 animation-block">
+          <h1 class="section-title text-white title-top-dots my-4 slide-from-left-animation">
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            WHAT <br> WE DO
+          </h1>
+          <div class="row pt-5">
+            <div class="col-4 col-md-2 mb-5 pb-3 px-1">
+              <h3 class="fs-6 letter-spacing-sm-1 text-white fade-down-animation">
+                MEDIA <br> STRATEGY
+              </h3>
+            </div>
+            <div class="col-4 col-md-2 mb-5 pb-3 px-1">
+              <h3 class="fs-6 letter-spacing-sm-1 text-white fade-down-animation">
+                MEDIA BUYING <br>& EXECUTION
+              </h3>
+            </div>
+            <div class="col-4 col-md-2 mb-5 pb-3 px-1">
+              <h3 class="fs-6 letter-spacing-sm-1 text-white fade-down-animation">
+                MEASUREMENT <br> & REPORTING
+              </h3>
+            </div>
+          </div>
+          <div class="row title-top-bar"
+            style="--bar-bg: #92B6D5; --bar-height:8px; --bar-width:100px; --left:10px; --bar-distance:-40px">
+            <div class="col-4 col-md-2 mb-3 pb-3">
+              <h3 class="fs-6 text-white fade-down-animation">
+                PAID <br> SOCIAL
+              </h3>
+            </div>
+            <div class="col-4 col-md-2 mb-3 pb-3">
+              <h3 class="fs-6 text-white fade-down-animation">
+                DIGITAL <br> OUT OF <br> HOME
+              </h3>
+            </div>
+            <div class="col-4 col-md-2 mb-3 pb-3">
+              <h3 class="fs-6 text-white fade-down-animation">
+                DISPLAY<br> & NATIVE
+              </h3>
+            </div>
+            <div class="col-4 col-md-2 mb-3 pb-3">
+              <h3 class="fs-6 text-white fade-down-animation">
+                MOBILE <br> APP
+              </h3>
+            </div>
+            <div class="col-4 col-md-2 mb-3 pb-3">
+              <h3 class="fs-6 text-white fade-down-animation">
+                CTV <br> & AUDIO
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					<h1 class="text-intro opacity-0">We're Coming Soon...</h1>
+    <section class="position-relative" id="work">
+      <div class="section-head pt-5" style="--section-head-bg: #fff;">
+        <div class="container ps-4 animation-block pb-4">
+          <h1 class="section-title title-top-dots my-4 slide-from-left-animation" style="color: #003554;">
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            OUR <br> WORK
+          </h1>
+          <div class="row py-4">
+            <div class="col-12 col-md-4 p-0">
+              <div class="card mx-2 mb-2 rounded-0 border-0 bg-dark text-white fade-from-bottom-animation">
+                <img class="card-img rounded-0" src="assets/img/Our work_image 1.jpg" alt="Card image">
+                <div
+                  class="card-img-overlay rounded-0 px-0 d-flex flex-column align-items-center justify-content-center d-none">
+                  <div class="position-absolute w-100 top-50">
+                    <h3 class="work-text-title">HYGIENE CATEGORY SALES LIFT</h3>
+                    <div class="d-flex work-text work-text-multi-bg">
+                      <span>2:1</span>
+                      <span>$900k</span>
+                      <span>$280k+</span>
+                    </div>
+                    <div class="d-flex work-text bg-white" style="color: #003554;">
+                      <span>ROAS</span>
+                      <span>Total Cart <br> Value</span>
+                      <span>Estimated <br> Incremental Sales*</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 p-0">
+              <div class="card mx-2 mb-2 rounded-0 border-0 bg-dark text-white fade-from-bottom-animation">
+                <img class="card-img rounded-0" src="assets/img/Our Work Image 2.png" alt="Card image">
+                <div
+                  class="card-img-overlay rounded-0 px-0 d-flex flex-column align-items-center justify-content-center d-none">
+                  <div class="position-absolute w-100 top-50">
+                    <h3 class="work-text-title">HYGIENE CATEGORY SALES LIFT</h3>
+                    <div class="d-flex work-text work-text-multi-bg">
+                      <span>2:1</span>
+                      <span>$900k</span>
+                      <span>$280k+</span>
+                    </div>
+                    <div class="d-flex work-text bg-white" style="color: #003554;">
+                      <span>ROAS</span>
+                      <span>Total Cart <br> Value</span>
+                      <span>Estimated <br> Incremental Sales*</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 p-0">
+              <div class="card mx-2 mb-2 rounded-0 border-0 bg-dark text-white fade-from-bottom-animation">
+                <img class="card-img rounded-0" src="assets/img/Our Work_image 3.jpg" alt="Card image">
+                <div
+                  class="card-img-overlay rounded-0 px-0 d-flex flex-column align-items-center justify-content-center d-none">
+                  <div class="position-absolute w-100 top-50">
+                    <h3 class="work-text-title">HYGIENE CATEGORY SALES LIFT</h3>
+                    <div class="d-flex work-text work-text-multi-bg">
+                      <span>2:1</span>
+                      <span>$900k</span>
+                      <span>$280k+</span>
+                    </div>
+                    <div class="d-flex work-text bg-white" style="color: #003554;">
+                      <span>ROAS</span>
+                      <span>Total Cart <br> Value</span>
+                      <span>Estimated <br> Incremental Sales*</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-center">
+            <div class="col-2"><img src="assets/img/Our work_logo_amazon.png" class="img-fluid work-bottom-logo" alt="">
+            </div>
+            <div class="col-2"><img src="assets/img/Our work_Logo_Loreal.png" class="img-fluid work-bottom-logo" alt="">
+            </div>
+            <div class="col-2"><img src="assets/img/Our work_Logo_Nestle.png" class="img-fluid work-bottom-logo" alt="">
+            </div>
+            <div class="col-2"><img src="assets/img/Our work_Logo_Microsoft.png" class="img-fluid work-bottom-logo"
+                alt=""></div>
+            <div class="col-2"><img src="assets/img/Our work_logo_milos.png" class="img-fluid work-bottom-logo" alt="">
+            </div>
+            <div class="col-2"><img src="assets/img/Our work_logo_simply good foods.png"
+                class="img-fluid work-bottom-logo" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					<p class="text-intro opacity-0">Breathe new life into your brand with personalized marketing strategies.</p>
+    <section class="position-relative" id="how">
+      <div class="section-body section-bg"
+        style="--section-bg: url('../img/Background_How_we_do_it.jpg'); --opacity: 0.75;">
+        <div class="container z-1 position-relative">
+          <div class="row align-items-center ps-4 animation-block">
+            <h1 class="section-title title-top-dots mb-4 mb-md-5 mt-5 slide-from-left-animation"
+              style="color: #003554;">
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              HOW <br> WE DO IT
+            </h1>
 
-					<nav>
-						<ul>
-							<li>
-								<a href="https://forms.gle/sfFQzM2pivsc7UKNA" target="_blank" class="action-btn trigger text-intro opacity-0">Contact Us</a>
-							</li>
-						</ul>
-					</nav>
+            <p class="fade-animation mb-4" style="color: #006494;">O2 Media optimizes your digital media in an
+              omni-channel
+              approach which provides numerous benefits, such as breaking
+              down silos and maximizing budget efficiency.</p>
 
-				</div>
-				<!-- END - Content -->
+            <p class="fade-animation mb-4" style="color: #006494;">When budgets are optimized across
+              multiple media channels, resources are (re)allocated more effectively, minimizing
+              wasted spending on underperforming platforms, placements, audiences and ad types
+            </p>
 
-				<!-- START - Bottom home -->
-				<div class="bottom-home">
-					
-					<!-- Social icons, replace # by your links -->
-					<div class="social-icons">
+            <p class="fade-animation mb-4" style="color: #006494;">The holistic view of performance metrics enables real
+              time
+              data-driven decision-making, helping to refine targeting and
+              content while delivering on your business goals.
+            </p>
 
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-google-plus"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
+            <p class="fade-animation fw-bold text-md-center" style="color: #003554;">Ultimately, this approach maximizes
+              reach, improves ROI,
+              and strengthens brand sales by meeting shoppers wherever they
+              are in the digital landscape.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					</div>
+    <!-- <section class="section bg-white position-relative" id="clients">
+      <div class="section-head pb-0 pb-md-5 pt-5" style="--section-head-bg: #92b6d5;">
+        <div class="container pt-5 ps-4 ps-md-5 animation-block">
+          <h1 class="section-title text-dark-black title-top-bar slide-from-left-animation"
+            style="--bar-bg: #4E5AC3; --bar-height:12px; --bar-width:50px; --bar-distance:-30px">
+            OUR <br> CLIENTS
+          </h1>
+          <div class="row py-4">
+            <div class="col-10 col-md-7">
+              <p class="m-0 fade-animation">I'm a paragraph. Click here to add your own text and edit me.</p>
+              <p class="m-0 fade-animation">
+                It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the
+                font.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-body" style="min-height: auto;">
+        <div class="container">
+          <div class="row mt-5 mt-md-0 align-items-center">
+            <div class="col-6 col-md-3 mb-5 animation-block">
+              <img class="img-fluid slide-from-left-animation" src="assets/img/company-1.webp" alt="">
+            </div>
+            <div class="col-6 col-md-3 mb-5 animation-block">
+              <img class="img-fluid slide-from-right-animation" src="assets/img/company-2.webp" alt="">
+            </div>
+            <div class="col-6 col-md-3 mb-5 animation-block">
+              <img class="img-fluid slide-from-left-animation" src="assets/img/company-3.webp" alt="">
+            </div>
+            <div class="col-6 col-md-3 mb-5 animation-block">
+              <img class="img-fluid slide-from-right-animation" src="assets/img/company-4.webp" alt="">
+            </div>
+            <div class="col-6 col-md-3 mb-5 animation-block">
+              <img class="img-fluid slide-from-left-animation" src="assets/img/company-5.webp" alt="">
+            </div>
+            <div class="col-6 col-md-3 mb-5 animation-block">
+              <img class="img-fluid slide-from-right-animation" src="assets/img/company-6.webp" alt="">
+            </div>
+            <div class="col-6 col-md-3 mb-5 animation-block">
+              <img class="img-fluid slide-from-left-animation" src="assets/img/company-7.webp" alt="">
+            </div>
+            <div class="col-6 col-md-3 mb-5 animation-block">
+              <img class="img-fluid slide-from-right-animation" src="assets/img/company-8.webp" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
-					<p class="copyright">
-						© O<sub>2</sub> Media
-					</p>
+    <section class="position-relative" id="team">
+      <div class="section-body section-bg-static" style="background-color: #051923;">
+        <div class="container ps-4 ps-md-5 z-1 position-relative">
+          <div class="pb-0">
+            <div class="container pt-5 animation-block">
+              <h1 class="section-title title-top-dots text-white slide-from-left-animation">
+                <div>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                OUR <br> TEAM
+              </h1>
+              <div class="py-4">
+                <p class="m-0 text-white fade-animation">Our team brings over 40 years of combined
+                  experience in marketing,
+                  demonstrating deep expertise in strategy, client
+                  services, and media operations. Our extensive knowledge in omni-channel marketing enables us to craft
+                  effective
+                  campaigns, drive client satisfaction, and optimize media performance.
+                </p>
+              </div>
+            </div>
+          </div>
 
-				</div>
-				<!-- END - Bottom home -->
+          <div class="section-body ps-md-3 pe-3 pe-md-0" style="min-height: auto;">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-4 p-0 animation-block">
+                <div class="card mx-2 mb-2 rounded-0 border-0 bg-dark text-white fade-from-bottom-animation">
+                  <img class="card-img rounded-0" src="assets/img/Team_Melinda Clark.png" alt="Card image">
+                  <div
+                    class="card-img-overlay px-0 rounded-0 d-flex flex-column align-items-center justify-content-center d-none">
+                    <div class="position-absolute w-100 team-intro px-3">
+                      <h5 class="card-title">Melinda Clark</h5>
+                      <p class="card-text">Client Development</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 p-0 animation-block">
+                <div class="card mx-2 mb-2 rounded-0 border-0 bg-dark text-white fade-from-bottom-animation">
+                  <img class="card-img rounded-0" src="assets/img/Team_Jacobi Crisler.png" alt="Card image">
+                  <div
+                    class="card-img-overlay rounded-0 d-flex flex-column align-items-center justify-content-center d-none">
+                    <div class="position-absolute w-100 team-intro px-3">
+                      <h5 class="card-title">Jacobi Crisler</h5>
+                      <p class="card-text">Client Development</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 p-0 animation-block">
+                <div class="card mx-2 mb-2 rounded-0 border-0 bg-dark text-white fade-from-bottom-animation">
+                  <img class="card-img rounded-0" src="assets/img/Team_Alex Ham.png" alt="Card image">
+                  <div
+                    class="card-img-overlay rounded-0 d-flex flex-column align-items-center justify-content-center d-none">
+                    <div class="position-absolute w-100 team-intro px-3">
+                      <h5 class="card-title">Alex Ham</h5>
+                      <p class="card-text">Media Operations</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-			</section>
-			<!-- END - Home section -->
+    <!-- <section class="position-relative" id="facts">
+      <div class="section-body section-bg py-0 py-md-5" style="--section-bg: url(../img/bg-3.webp);">
+        <div class="container pt-5  ps-4 ps-md-5 animation-block">
+          <h1 class="section-title text-dark-black title-top-bar mb-4 mt-5 slide-from-left-animation"
+            style="--bar-bg: #fff; --bar-height:12px; --bar-width:50px; --bar-distance:-40px">
+            FUN <br> FACTS</h1>
+          <div class="row py-0 py-md-5">
+            <div class="col-6 col-md-3  mb-5 mb-md-0 fade-down-animation">
+              <h3 class="text-white fs-0 fw-bold mb-4">106</h3>
+              <h3 class="fs-6 fw-bolder text-white" style="letter-spacing: 0.2em;">HAPPY <br> CLIENTS</h3>
+            </div>
+            <div class="col-6 col-md-3  mb-5 mb-md-0 fade-down-animation">
+              <h3 class="text-white fs-0 fw-bold mb-4">198</h3>
+              <h3 class="fs-6 fw-bolder text-white" style="letter-spacing: 0.2em;">WEBSITES <br> LAUNCHED</h3>
+            </div>
+            <div class="col-6 col-md-3  mb-5 mb-md-0 fade-down-animation">
+              <h3 class="text-white fs-0 fw-bold mb-4">506</h3>
+              <h3 class="fs-6 fw-bolder text-white" style="letter-spacing: 0.2em;">SOCIAL <br> CAMPAIGNS</h3>
+            </div>
+            <div class="col-6 col-md-3  mb-5 mb-md-0 fade-down-animation">
+              <h3 class="text-white fs-0 fw-bold mb-4">1603</h3>
+              <h3 class="fs-6 fw-bolder text-white" style="letter-spacing: 0.2em;">CUPS OF <br> COFFEE</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
-		</div>
-		<!-- END - Home part -->
+    <section class="bg-white position-relative" id="contact">
+      <div class="section-body section-bg pt-5"
+        style="--section-bg: url('../img/Background_contact.svg'); --opacity: ;">
+        <div class="container position-relative z-1 ps-4 ps-md-5 animation-block">
+          <div class="pb-0 pb-md-5">
+            <h1 class="section-title title-top-dots slide-from-left-animation" style="color: #003554;">
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              GET IN <br> TOUCH
+            </h1>
+          </div>
+          <div class="section-body pb-4" style="min-height: auto;">
+            <div class="row">
+              <div class="col-12 col-md-6 px-4 px-md-5 mb-5 mb-md-0">
+                <form action="">
+                  <div class="mb-2">
+                    <label for="firstName" class="form-label">First Name *</label>
+                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="firstName">
+                  </div>
+                  <div class="mb-2">
+                    <label for="lastName" class="form-label">Last Name *</label>
+                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="lastName">
+                  </div>
+                  <div class="mb-2">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="email">
+                  </div>
+                  <div class="mb-2">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control border-black border-2 rounded-0 px-3 py-2" id="subject">
+                  </div>
+                  <div class="mb-2">
+                    <label for="message" class="form-label">Enter Your Message</label>
+                    <textarea type="text" rows="3" class="form-control border-black border-2 rounded-0 px-3 py-2"
+                      id="message" style="resize: none;"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary submit-btn ms-auto d-block">Submit</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-12 col-md-6  ps-4 pb-4 pb-md-0 ps-md-5 animation-block">
+                <h3 class="fs-5 letter-spacing-1.5px fw-bold" style=" color: #003554;">We can't wait to
+                  hear from you!</h3>
+                <!-- <address class="fade-animation">
+                  500 Terry Francine Street,<br>
+                  CA 94158 <br>
+                  San Francisco,
+                </address>
+
+                <address class="fade-animation">
+                  <a class="text-dark-black text-decoration-none"
+                    href="mailto:info@mysite.com"><b>info@mysite.com</b></a>
+                  <br>
+                  <a class="text-dark-black text-decoration-none" href="tel:123-456-7890"><b>123-456-7890</b></a>
+                </address> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="scroll-top">
+      <i class="fa-solid fa-angle-up"></i>
+    </div>
+
+    <footer class="footer-bg py-5" style="--footer-bg: #003554;">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 px-0">
+            <p class="m-0 text-white ps-4 ps-md-5"> &copy; 2024 O2 Media LLC.</p>
+            <p class="m-0 text-white ps-4 ps-md-5">Made with ❤️ by Texon Ltd.</p>
+          </div>
+          <div class="col-12 col-md-6 px-0">
+            <div class=" mb-4 mb-md-0 ps-4 ps-md-5">
+              <p class="text-white">Follow Us:</p>
+              <div class="d-flex align-items-center gap-3 text-white">
+                <a class="text-white fs-3" href="#"> <i class="fa-brands fa-facebook-f"></i> </a>
+                <a class="text-white fs-3" href="#"> <i class="fa-brands fa-twitter"></i> </a>
+                <a class="text-white fs-3" href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                <a class="text-white fs-3" href="#"> <i class="fa-brands fa-youtube"></i> </a>
+                <a class="text-white fs-3" href="#"> <i class="fa-brands fa-pinterest-p"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
 
 
-		<!-- ///////////////////\\\\\\\\\\\\\\\\\\\ -->
-	    <!-- ********** Resources jQuery ********** -->
-	    <!-- \\\\\\\\\\\\\\\\\\\/////////////////// -->
-		
-		<!-- * Libraries jQuery, Easing and Bootstrap - Be careful to not remove them * -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.easings.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 
-		<!-- Newsletter plugin -->
-		<script src="js/notifyMe.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-		<!-- Contact form plugin -->
-		<script src="js/contact-me.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      gsap.registerPlugin(ScrollTrigger)
+    });
 
-		<!-- Scroll plugin -->
-		<script src="js/jquery.mousewheel.js"></script>
-
-		<!-- Custom Scrollbar plugin -->
-		<script src="js/jquery.mCustomScrollbar.js"></script>
-
-		<!-- Popup Newsletter Form -->
-		<script src="js/classie.js"></script>
-		<script src="js/dialogFx.js"></script>
-
-		<!-- PhotoSwipe Core JS file -->
-		<script src="js/photoswipe.js"></script> 
-
-		<!-- PhotoSwipe UI JS file -->
-		<script src="js/photoswipe-ui-default.js"></script>
-
-		<!-- Countdown plugin -->
-		<script src="js/jquery.countdown.js"></script>
-
-		<script>
-		$("#getting-started")
-			// Year/Month/Day Hour:Minute:Second
-			.countdown("2016/10/24 15:30:30", function(event) {
-				$(this).html(
-					event.strftime('<strong>%D Days</strong> %Hh %Mm %Ss')
-				);
-		});
-		</script>
-
-		<!-- Bubble effect -->
-		<script src="js/bubble.js"></script>
-
-		<!-- Main JS File -->
-		<script src="js/main.js"></script>
-		
-		<!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
-
-	</body>
+  </script>
+  <script src="assets/js/index.js"></script>
+</body>
 
 </html>
