@@ -621,28 +621,32 @@
   <script>
     document.addEventListener("DOMContentLoaded", (event) => {
       gsap.registerPlugin(ScrollTrigger)
+
+      // Add form submission handling
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        fetch(this.action, {
+          method: 'POST',
+          body: new FormData(this)
+        })
+        .then(response => {
+          if (response.ok) {
+            alert('Form submitted successfully!');
+            this.reset();
+          } else {
+            alert('Form submission failed. Please try again.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('An error occurred. Please try again.');
+        });
+      });
     });
 
   </script>
   <script src="assets/js/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script>
-    (function() {
-      emailjs.init("YOUR_USER_ID");
-    })();
-  </script>
-
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-        .then(function() {
-          console.log('SUCCESS!');
-        }, function(error) {
-          console.log('FAILED...', error);
-        });
-    });
-  </script>
 </body>
 
 </html>
