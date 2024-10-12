@@ -171,41 +171,4 @@ $(document).ready(function () {
 
   }
 
-  // Add the new form submission code at the end of the $(document).ready function
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    grecaptcha.ready(function() {
-      grecaptcha.execute('6LfNpl8qAAAAAPzOMPuRRchmr8RisjQgBZXmXwC3', {action: 'submit'}).then(function(token) {
-        document.getElementById('recaptchaResponse').value = token;
-        
-        // Now submit the form
-        submitForm();
-      });
-    });
-  });
 });
-
-// Add this function outside of the $(document).ready block
-function submitForm() {
-  fetch('https://us-central1-o2-media-recaptcha.cloudfunctions.net/recaptcha', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(Object.fromEntries(new FormData(document.getElementById('contact-form'))))
-  })
-  .then(response => response.json())
-  .then(data => {
-    if (data.message === 'Success') {
-      alert('Form submitted successfully!');
-      document.getElementById('contact-form').reset();
-    } else {
-      alert('Form submission failed. Please try again.');
-    }
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    alert('An error occurred. Please try again.');
-  });
-}
