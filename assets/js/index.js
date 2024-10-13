@@ -171,4 +171,38 @@ $(document).ready(function () {
 
   }
 
+  // Form submission code
+  $('#contact-form').submit(function(event) {
+    event.preventDefault();
+    
+    var form = $(this);
+    var submitButton = form.find('button[type="submit"]');
+    var originalButtonText = submitButton.text();
+    
+    submitButton.prop('disabled', true).text('Sending...');
+
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6LcK5F8qAAAAABeAA22STia90Hp3V8xg1_TkYfON', {action: 'submit'}).then(function(token) {
+        $('#g-recaptcha-response').val(token);
+
+        $.ajax({
+          url: form.attr('action'),
+          method: form.attr('method'),
+          data: form.serialize(),
+          dataType: 'json',
+          success: function(response) {
+            alert('Form submitted successfully!');
+            form[0].reset();
+          },
+          error: function(err) {
+            alert('Oops! There was a problem submitting your form');
+          },
+          complete: function() {
+            submitButton.prop('disabled', false).text(originalButtonText);
+          }
+        });
+      });
+    });
+  });
+
 });
